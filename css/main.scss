@@ -41,7 +41,7 @@ body{
 
 
 
-h1, h2, h3, h4{
+h1, h2, h3{
     font-weight: 400;
     color: var(--dark-blue);
 }
@@ -221,7 +221,7 @@ header{
         margin-bottom: 1.5rem;
         max-width: 533px;
         margin: auto;
-        p, h4{
+        p, h3{
             margin: .5rem 1.5rem 0 1.5rem;
         }
         .article-author{
@@ -235,7 +235,7 @@ header{
             object-fit:cover;
             margin: auto;
         }
-        h4{
+        h3{
             letter-spacing:-.02em;
             font-size: .96em;
             
