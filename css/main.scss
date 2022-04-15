@@ -319,7 +319,7 @@ footer{
    }
 
 }
-
+//desktop view
 @media(min-width:1020px){
     .hero-container .hero-graphic-mobile{
         display:none;    
@@ -363,14 +363,23 @@ footer{
                       display: flex;
                       align-items: center;
                       pointer-events: none;
-                      border-bottom: 4px solid transparent;
-                      
-                      
-                      
-                      &:hover{
-                        border-bottom: 4px solid var(--lime-green);                        
+                      position:relative;
+                    
+                    
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        display: none;
+                        width: 100%;
+                        bottom:0;
+                        height: 4px;
+                        background: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
                         
+                    }  
+                    &:hover:before{
+                        display: inline-block;
                     }
+                    
                   }
                   
 

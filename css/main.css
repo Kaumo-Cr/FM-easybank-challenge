@@ -396,10 +396,20 @@ footer .attribution a {
         -ms-flex-align: center;
             align-items: center;
     pointer-events: none;
-    border-bottom: 4px solid transparent;
+    position: relative;
   }
-  .main-nav .nav-links ul li .link-container:hover {
-    border-bottom: 4px solid var(--lime-green);
+  .main-nav .nav-links ul li .link-container::before {
+    content: "";
+    position: absolute;
+    display: none;
+    width: 100%;
+    bottom: 0;
+    height: 4px;
+    background: -webkit-gradient(linear, left top, right top, from(var(--lime-green)), to(var(--bright-cyan)));
+    background: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
+  }
+  .main-nav .nav-links ul li .link-container:hover:before {
+    display: inline-block;
   }
   .main-nav .nav-links ul li a {
     color: var(--grayish-blue);
